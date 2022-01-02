@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal_Website</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://i.pinimg.com/originals/67/c0/d2/67c0d28e4408d3edc51bca5c1854c65d.gif");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body onload="checkCookie();">
+
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Hola!! Welcome again! " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT ME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#experience" class="w3-button w3-block w3-black">EXPERIENCE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contact" class="w3-button w3-block w3-black">CONTACT & FEEDBACK</a>
+    </div>
+    <div class="w3-col s0">
+      <a href="#game" class="w3-button w3-block w3-black">GAME</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Personal Website</span>
+  </div>
+  <div class="w3-display-middle w3-center" style="color:blue">
+    <span class="w3-text-white" style="font-size:40px">Hi<span class="wave">👋</span>,I'm Aiswarya</span>
+    <br><br>
+    <div class="center">
+            <div>
+                <img src="Aish.png"  height="200" width="200">
+            </div>
+  </div>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+	  <br>
+    <span class="w3-text-white">welcome</span>
+  </div>
+</header>
+
+
+<!-- About Container -->
+<div style="background-image: url('https://images.assetsdelivery.com/compings_v2/ivan101/ivan1011805/ivan101180500083.jpg');">
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:500px"><br><br><br><br>
+    <h5 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">ABOUT ME</span></h5><br>
+    <p>I'm an undergraduate CSE student at Amrita University, Amritapuri, Kollam.</p>
+    <p>I passed my 10th with 94.8% from M.E.S International school, Pattambi.</p>
+    <p>I passed my 12th with 91% from Bharatiya Vidya Bhavans Vidya Mandir, Thrissur.</p>
+    <p>I'm competent in learning about cyber security and ethical hacking.</p>
+    <p>I'm intrested in cycling, listening music, planting, traveling</p>
+   </div>
+</div>
+<br><br>
+<!-- Experience Container -->
+<div class="w3-container" id="experience">
+  <div class="w3-content" style="max-width:500px"><br><br><br><br>
+    <h5 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">EXPERIENCE</span></h5><br>
+  <p>I'm part of Team Shakti for experiencing new ventures in cyber security.</p>
+  <p>I'm part of Team Bi0s under the category web exploitation.</p>
+  <p>Have experience in playing ctf.</p>
+  <p>Developed a php shopping cart.</p>
+  <p>I've experience in:
+  <ul><li>C</li>
+  <li>C++</li>
+  <li>Python</li>
+  <li>PHP</li>
+  </ul>
+  </p>
+    </div>
+    </div>
+    </div>
+
+<!-- Contact & Feedback Container -->
+<div style="background-image: url('https://newevolutiondesigns.com/images/freebies/black-wallpaper-8.jpg');">
+<div class="w3-container" id="contact" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:500px"><br><br><br><br>
+    <h5 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">CONTACT</span></h5><br>
+    <p><center><span class="w3-tag">E-mail:aiswarya2747@gmail.com</span></center></p>
+    <br>
+    <h6 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">SOCIAL MEDIA</span></h6>
+    <br>
+    <div class="social-icons" id="contact" align="center" style="font-size:70px" >
+    <a style="color:yellow" href="https://twitter.com/Aiswary65463972" ><i class="fab fa-twitter"></i></a>
+    <a style="color:yellow" href="https://www.instagram.com/aiswarya_jayasree/" ><i class="fab fa-instagram"></i></a>
+    <a style="color:yellow" href="https://github.com/itsmeaiswarya" ><i class="fab fa-github"></i></a>
+</div>
+</div>
+
+
+<div class="container">
+<div class="w3-content" style="max-width:500px"><br><br><br><br>
+<h5 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">FEEDBACK</span></h5><br>
+  <form name="Assign" align="center" onsubmit="Validate();">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+		 <input type="text" id="email" name="email" placeholder="email.."> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="telephone">Telephone</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="telephone" name="telephone" placeholder="telephone..">
+      </div>
+    </div>
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="address" name="address" placeholder="address..">
+      </div>
+    </div>
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="pincode">Pincode</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="pincode" name="pincode" placeholder="pincode..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="rating">Rate my webpage:</label>
+      </div>
+      <div class="col-75">
+        <select id="rating" name="rating">
+          <option>1
+          <option>2
+          <option>3
+          <option>4
+          <option>5
+        </select>
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Feedback</label>
+      </div>
+      <div class="col-75">
+        <textarea id="feedback" name="feedback" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+    </div>
+  </form>
+</div>
+
+<!-- Game Container -->
+<div class="w3-container" id="game">
+<div class="w3-content" style="max-width:500px">
+	<font color="white">
+    <h5 class="w3-center w3-padding-45"><span class="w3-tag w3-wide">ZODIAC SIGN GAME</span></h5><br>
+<h4 id='s_zodiac'>Here it will display the Zodiac sign</h4><form action='#' method='post'>
+<p>Select the day and month, then click the button.</p>
+ Day: <select id='s_days'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option></select>
+ Month: <select id='s_m'><option value='1'>January</option><option value='2'>February</option><option value='3'>March</option><option value='4'>April</option><option value='5'>May</option><option value='6'>June</option><option value='7'>July</option><option value='8'>August</option><option value='9'>September</option><option value='10'>October</option><option value='11'>November</option><option value='12'>December</option></select>
+ <input type='button' id='test_z' value='Zodiac sign' />
+</form>
+
+<script>
+function zodiac(day, month){
+
+ var zodiac =['', 'Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn'];
+ var last_day =['', 19, 18, 20, 20, 21, 21, 22, 22, 21, 22, 21, 20, 19];
+ return (day > last_day[month]) ? zodiac[month*1 + 1] : zodiac[month];
+}
+document.getElementById('test_z').onclick = function(){
+ document.getElementById('s_zodiac').innerHTML = zodiac(document.getElementById('s_days').value, document.getElementById('s_m').value);
+}
+</script>
+</font>
+</div>
+<br><br>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-purple w3-padding-45 w3-large" >
+
+<p>©Copyright 2021:All rights reserved to the author.</p>
+</footer>
+<script>
+    function Validate() {
+      var email = document.getElementById('email').value;
+      var x=email.indexOf('@');
+      var y=email.lastIndexOf('\.');
+      var condition = email.length>0 && x>0 && y>x+2 && email[y+1]!=='.' && email.indexOf(' ')===-1 && email.indexOf('..') ===-1;
+      if (condition){
+        alert('Submitted your Response!!');
+      }
+      else alert('Invalid email');
+    }
+</script>
+
+</body>
+</html>
